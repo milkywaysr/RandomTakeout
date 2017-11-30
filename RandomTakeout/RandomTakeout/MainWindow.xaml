@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomTakeout"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Width="800" Height="600">
     <Grid>
-        
+        <ListBox x:Name="menuList" HorizontalAlignment="Left" Height="450" Margin="10,70,0,0" VerticalAlignment="Top" Width="120" SelectionMode="Multiple"/>
+        <TextBox x:Name="textboxAdd" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAdd" Content="添加菜单" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="120" Click="onBtnAdd"/>
+        <Button x:Name="btnRemove" Content="删除菜单" HorizontalAlignment="Left" Margin="10,530,0,0" VerticalAlignment="Top" Width="120" Click="onBtnRemove"/>
+
     </Grid>
 </Window>
