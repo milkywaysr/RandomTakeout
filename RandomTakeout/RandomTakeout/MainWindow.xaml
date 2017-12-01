@@ -11,6 +11,11 @@
         <TextBox x:Name="textboxAdd" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnAdd" Content="添加菜单" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="120" Click="onBtnAdd"/>
         <Button x:Name="btnRemove" Content="删除菜单" HorizontalAlignment="Left" Margin="10,530,0,0" VerticalAlignment="Top" Width="120" Click="onBtnRemove"/>
+        <Button x:Name="btnStart" Content="开始！" HorizontalAlignment="Left" Margin="357,24,0,0" VerticalAlignment="Top" Width="75" Click="onBtnStart"/>
+        <Label Content="今晚吃" HorizontalAlignment="Left" Margin="370,70,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labEat" Content="啥" HorizontalAlignment="Left" Margin="376,118,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSave" Content="保存菜单" HorizontalAlignment="Left" Margin="171,212,0,0" VerticalAlignment="Top" Width="75" Click="onBtnSave"/>
+        <Button x:Name="btnLoad" Content="载入菜单" HorizontalAlignment="Left" Margin="171,249,0,0" VerticalAlignment="Top" Width="75" Click="onBtnLoad"/>
 
     </Grid>
 </Window>

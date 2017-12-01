@@ -40,12 +40,47 @@ namespace RandomTakeout
 
         private void onBtnRemove(object sender, RoutedEventArgs e)
         {
-            System.Collections.IList items = menuList.SelectedItems;
-            for(int i = 0; i < items.Count; i++)
+            while(menuList.SelectedIndex >= 0)
             {
-                menuList.Items.Remove(items[i]);
+                menuList.Items.Remove(menuList.SelectedItem);
             }
+        }
+
+        private void onBtnStart(object sender, RoutedEventArgs e)
+        {
+            if (menuList.Items.Count > 0)
+            {
+                Random random = new Random();
+                int i = random.Next(menuList.Items.Count);
+                labEat.Content = menuList.Items.GetItemAt(i);
+            }
+            else
+            {
+                MessageBox.Show("请输入菜单");
+            }
+        }
+
+        private void onBtnSave(object sender, RoutedEventArgs e)
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("menu.dat", false))
+            {
+                foreach(string menu in menuList.Items)
+                {
+                    file.WriteLine(menu);
+                }
+            }
+        }
+
+        private void onBtnLoad(object sender, RoutedEventArgs e)
+        {
             menuList.UnselectAll();
+            menuList.Items.Clear();
+            string[] lines = System.IO.File.ReadAllLines("menu.dat");
+            foreach(string line in lines)
+            {
+                menuList.Items.Add(line);
+            }
+
         }
     }
 }
